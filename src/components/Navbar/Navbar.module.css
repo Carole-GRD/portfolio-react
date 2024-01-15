@@ -1,0 +1,74 @@
+/* ------------------------------------- */
+/* -------------  NAVBAR   ------------- */
+/* ------------------------------------- */
+
+nav {
+    background-color: var(--colorLightPink);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    visibility: hidden;
+    height: 36px;
+    margin-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+nav ul {
+    top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 12px 16px;
+}
+
+nav ul li:not(.logo):hover {
+    background-color: var(--colorBlack);
+}
+
+nav ul li:hover a {
+    color: var(--colorLightPink);
+}
+
+nav ul li a {
+    color: var(--colorBlack);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+
+
+/* ------------------------------------- */
+/* ----------  MEDIA QUERIES   ----------- */
+/* ------------------------------------- */
+
+@media only screen and (min-width: 800px) {
+    nav img {
+        visibility: visible;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    nav img {
+        height: 54px;
+    }
+    nav ul li a {
+        font-size: 1.4rem;
+    }
+}
+

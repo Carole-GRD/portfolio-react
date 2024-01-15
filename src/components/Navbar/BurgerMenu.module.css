@@ -1,0 +1,139 @@
+
+
+/* Checkbox */
+.navigationCheckbox {
+    display: none;
+}
+
+/* ------------------------------------- */
+/* ----------  MEDIA QUERIES   ----------- */
+/* ------------------------------------- */
+
+@media only screen and (min-width: 800px) {
+
+    .navigationBg,
+    .navigationBtn {
+        display: none;
+    }
+}
+
+
+/* ------------------------------------- */
+/* ----------  BURGER MENU   ----------- */
+/* ------------------------------------- */
+@media only screen and (max-width: 799px) {
+   
+    /* List */
+    .navigationList {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 35%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        list-style-type: none;
+        text-align: center;
+        z-index: 1500;
+        width: 0;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navigationList li {
+        width: 100%;
+    }
+
+    .navigationCheckbox:checked ~ .navigationList {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2000;
+        opacity: 1;
+        width: 100%;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navigationItem {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    /* Background */
+    .navigationBg {
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        position: fixed;
+        top: 11px;
+        right: 71px;
+        background-image: radial-gradient(#c3073f, #950740);
+        z-index: 1000;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .navigationCheckbox:checked ~ .navigationBg {
+        transform: scale(80);
+    }
+
+    /* Button */
+    .navigationBtn {
+        background-color: #fff;
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        top: 10px;
+        right: 70px;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Row's button */
+    .navigationIcon {
+        position: relative;
+        margin-top: 20px;
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+    }
+
+    .navigationIcon::before,
+    .navigationIcon::after {
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+
+    .navigationIcon::before {
+        top: -8px;
+    }
+
+    .navigationIcon::after {
+        top: 8px;
+    }
+
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon {
+        background-color: transparent;
+    }
+
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}

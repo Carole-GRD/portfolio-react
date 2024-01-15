@@ -1,4 +1,48 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorLightPink: #f2e9eb;
+    --colorLightPinkTransparent: #f2e9ebec;
+    --colorPink: #dd8ea4;
+    --colorPinkTransparent: #dd8ea5da;
+    --colorYellow: #fedd89;
+    --colorBlack: #31383f;
+    --colorLightBlack: #435160;
+    --colorTransparent: #ffffffaa;
+}
+
+/* mise en forme pour le SCROLLSPY */
+.styleScrollSpy{
+    color: var(--colorLightPink);
+    background-color: var(--colorBlack);
+}
+
+/* scrollspy en javascript */
+/* si (scrollspy) ancre en CSS => rajouter les href="#home"... dans le HTML !! */
+/* html{
+    scroll-behavior: smooth;
+} */
+
+body{
+    /* width: 100vw; */
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* ////////////////////////////////////////////////////////////// */
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +109,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
