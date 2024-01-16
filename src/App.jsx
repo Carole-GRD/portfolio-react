@@ -1,7 +1,10 @@
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
 
 import "./App.css";
+
+import parallax from "./assets/images/mainClavier.webp";
 
 function App() {
 
@@ -14,31 +17,12 @@ function App() {
 
 
     <main>
-        {/* <img id="aboutBackgroundImage" src="mainClavier.webp" alt="Photos de mains sur un clavier d'ordinateur"/> */}
+        <img id="aboutBackgroundImage" src={parallax} alt="Photos de mains sur un clavier d'ordinateur"/>
 
         <Home />
 
+        <About />
 
-        {/* <section id="about">
-            <div class="box-about">
-                <div class="container-about">
-                    <div class="aboutColumn">
-                        <div class="aboutLeft">
-                            <h2>à propos</h2>
-                            <h3>Développeuse Javascript Full Stack</h3>
-                            <p>Curieuse de comprendre les technologies qui sont de plus en plus présentes dans nos vies de tous les jours, j’ai décidé de découvrir les métiers de l’informatique.</p>
-                            <p>Intéressée par les défis et la logique, je me suis découvert un intérêt pour la programmation et j’ai choisi de devenir développeuse web full-stack afin de toucher à un large panel de domaines d'activités.</p>
-                            <a href="cv_carole_gerard.pdf" title="Voir le CV" target="_blank"><input type="submit" name="myCV" id="myCV" value="CV format PDF"/></a>
-                            
-                        </div>
-
-                        <div class="aboutRight">
-                            <img src="photoCaroleTestNB.png" alt="Photo de Carole Gérard"/>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-        </section> */}
 
         
         {/* <section id="competence">

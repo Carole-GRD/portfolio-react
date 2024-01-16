@@ -1,0 +1,109 @@
+/* ------------------------------------- */
+/* --------------  ABOUT --------------- */
+/* ------------------------------------- */
+
+#about {
+    position: absolute;
+    top: 100vh;
+    height: auto;
+    width: 100vw;
+    padding: 10vh 0;
+    background-color: #f2e9eb98;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 70%;
+    height: auto;
+    padding: 10vh 2vw;
+    border-radius: 10px;
+    color: var(--colorBlack);
+    background-color: var(--colorYellow);
+}
+
+.aboutColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+
+.aboutLeft {
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutLeft h2 {
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.aboutLeft p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.aboutRight {
+    margin: auto;
+}
+
+.aboutRight img {
+    width: 200px;
+    width: 200px;
+    border-radius: 10px;
+    padding-top: 5vh;
+}
+
+
+/* lien vers mon CV */
+#myCV {
+    position: relative;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.3vw, 1.2rem);
+    width: clamp(200px, 2.3vw, 300px);
+    margin-top: 30px;
+    padding: 20px 0;
+    text-decoration: none;
+    color: var(--colorLightBlack);
+    background-color: var(--colorLightPink);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#myCV:hover {
+    background-color: var(--colorLightBlack);
+    color: var(--colorLightPink);  
+} 
+
+
+
+
+/* ------------------------------------- */
+/* ----------  MEDIA QUERIES   ----------- */
+/* ------------------------------------- */
+
+@media only screen and (min-width: 1200px) {
+    .aboutContainer {
+        padding: 5vw;  
+    }
+    .aboutColumn {
+        flex-direction: row;
+    }
+    .aboutRight img {
+        padding-top: 0;
+    }
+}

@@ -57,7 +57,7 @@
 /* Image (Logo) */
 
 #home img {
-    width: clamp(200px, 30vw, 500px);
+    width: clamp(350px, 30vw, 500px);
     z-index: 0;
     position: absolute;
     top: 50%;

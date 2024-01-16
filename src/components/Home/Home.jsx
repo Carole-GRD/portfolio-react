@@ -19,8 +19,8 @@ export default function Home() {
             </div>
 
             <div className={styles.homeFooter}>
-                <p><strong>Développeuse Web</strong></p>
-                <p><strong>Carole Gérard</strong> &copy;2024</p>
+                <p><strong>Carole Gérard</strong></p>
+                <p><strong>Développeuse Web</strong> &copy;2024</p>
             </div>
             
         </section>

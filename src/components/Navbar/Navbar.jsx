@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.css";
 
-import smallLogo from "../../assets/icons/petitLogoCG.png";
+import smallLogo from "../../assets/images/petitLogoCG.png";
 
 import BurgerMenu from "./BurgerMenu";
 
