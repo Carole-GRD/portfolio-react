@@ -17,27 +17,31 @@
     --colorTransparent: #ffffffaa;
 }
 
+
+body{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+
+
+
 /* mise en forme pour le SCROLLSPY */
 .styleScrollSpy{
-    color: var(--colorLightPink);
-    background-color: var(--colorBlack);
+  color: var(--colorLightPink);
+  background-color: var(--colorBlack);
 }
 
 /* scrollspy en javascript */
 /* si (scrollspy) ancre en CSS => rajouter les href="#home"... dans le HTML !! */
 /* html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 } */
 
-body{
-    /* width: 100vw; */
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-}
 
-body::-webkit-scrollbar{
-    display: none;
-}
 
 
 /* ////////////////////////////////////////////////////////////// */

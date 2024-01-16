@@ -1,0 +1,92 @@
+/* ------------------------------------- */
+/* --------------  HOME  --------------- */
+/* ------------------------------------- */
+
+
+/* Section générale */
+
+#home {
+    height: 100vh;
+    letter-spacing: 1.2px;
+    color: var(--colorBlack);
+    background-color: var(--colorLightPink);
+}
+
+
+/* Texte */
+
+.textHomeContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textHomeContent {
+    padding: 0 15vw;
+    animation: 1.2s ease-in-out forwards textHomeAnimation;
+
+}
+
+@keyframes textHomeAnimation {
+    0% {
+        transform: scale(.2) rotate(-30deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.textHomeContent h1 {
+    font-weight: 400;
+    font-size: clamp(1.3rem, 1.5vw, 2rem);
+}
+
+.textHomeContent p {
+    font-weight: 700;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+
+.textHomeContent span {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+
+/* Image (Logo) */
+
+#home img {
+    width: clamp(200px, 30vw, 500px);
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: 2s ease-in-out forwards imgBigLogoCG;
+}
+
+@keyframes imgBigLogoCG{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* Footer de la section "Home" */
+
+.homeFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    background-color: var(--colorLightPink);
+    color: #31383fb0;
+}

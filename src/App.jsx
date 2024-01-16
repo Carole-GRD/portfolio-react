@@ -1,5 +1,7 @@
-import Navbar from './components/Navbar/Navbar'
-import './App.css'
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+
+import "./App.css";
 
 function App() {
 
@@ -12,20 +14,9 @@ function App() {
 
 
     <main>
-        {/* <img id="aboutBackgroundImage" src="mainClavier.webp" alt="Image de mains sur un clavier d'ordinateur"/> */}
+        {/* <img id="aboutBackgroundImage" src="mainClavier.webp" alt="Photos de mains sur un clavier d'ordinateur"/> */}
 
-
-        {/* <section id="home">
-            <img src="grandLogoCG.png" alt="Logo des initiales de Carole Gérard"/>
-            <div class="text-home">
-                <h1>Carole Gérard</h1>
-                <p>Fais de ta vie un rêve et d'un rêve une réalité <span> - Antoine de Saint-Exupéry</span></p>
-            </div>
-            <div class="homeFooter">
-                <p><strong>Dev FullStack JS</strong></p>
-                <p><strong>Carole Gérard</strong> &copy;2022</p>
-            </div>
-        </section> */}
+        <Home />
 
 
         {/* <section id="about">
