@@ -1,10 +1,11 @@
 # Portfolio
 
-
+Portfolio initialement créé avec HTML, CSS, et JavaScript en 2022, puis mis à jour avec React en 2024. 
 
 ## Tech
 
-*[![Vite][Vitejs]][Vite-url]
-[Vite.js]: https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E
-[Vite-url]: https://vitejs.dev/
+- Vite.js
+- React
+
+
 
