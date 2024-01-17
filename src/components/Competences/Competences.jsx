@@ -55,7 +55,7 @@ export default function Competences() {
     
 
     return (
-        <section id={styles.competence}>
+        <section id="competence" className={styles.competence}>
 
             <div className={styles.competenceContainer}>
 

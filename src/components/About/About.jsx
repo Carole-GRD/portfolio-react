@@ -9,7 +9,7 @@ import cv from "../../assets/cv_carole_gerard.pdf";
 export default function About() {
 
     return (
-        <section id={styles.about}>
+        <section id="about" className={styles.about}>
 
             <div className={styles.aboutContainer}>
 

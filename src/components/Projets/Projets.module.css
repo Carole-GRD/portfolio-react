@@ -1,0 +1,119 @@
+
+
+.projects {
+    position: relative;
+    height: auto;
+    padding: 10vh 0;
+    /* height: 100vh; */
+    color: var(--colorBlack);
+    background-color: var(--colorLightPink);
+}
+
+.projectsContainer {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    /* top: 50%;  
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+.projectsContainer h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* ////////////////////////////// */
+/* .projectsContent {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    height: 530px;
+    border: 3px solid var(--colorLightBlack);
+    border-radius: 10px;
+} */
+
+.projectsContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid var(--colorLightPink); */
+    /* border-radius: 10px; */
+    /* padding: 2vh 0; */
+}
+
+
+.articleDisplay {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 0;
+    gap: 50px;
+    
+    /* width: 55vw; */
+}
+/* ////////////////////////// */
+
+
+.projectsContent article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-width: 350px;
+    min-height: 550px;
+    border-radius: 10px;
+    border: 1px solid var(--colorLightBlack);
+}
+
+.projectsContent a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.projectsContent h3 {
+    /* transform: rotate(-45deg); */
+    /* z-index: 1; */
+    color: var(--colorBlack);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+}
+
+.projectsContent img {
+    height: 200px;
+    max-width: 250px;
+    object-fit: cover;
+    background-color: white;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px -1px var(--colorLightBlack);
+}
+
+.projectsContent h4 {
+    color: var(--colorBlack);
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.projectsContent p {
+    color: var(--colorBlack);
+    text-align: center;
+    width: 250px;
+}
+
+
+@media only screen and (min-width: 500px) {
+    .projectsContent article {
+        min-width: 400px;
+    }
+    .projectsContent img {
+        max-width: 300px;
+    }
+}

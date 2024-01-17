@@ -11,7 +11,11 @@ export default function Navbar() {
         <nav>
 
             <ul>
-                <li className={styles.logo}><a><img src={smallLogo} alt="Logo Carole Gérard avec un lien qui ramène à la page accueil" /></a></li>
+                <li className={styles.logo}>
+                    <a>
+                        <img src={smallLogo} alt="Logo Carole Gérard avec un lien qui ramène à la page accueil" />
+                    </a>
+                </li>
                 <li className={styles.navigationItem}><a>Dev Web</a></li>
             </ul>
 

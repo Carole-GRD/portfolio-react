@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
 
-        <section id={styles.home}>
+        <section id="home" className={styles.home}>
 
             <img src={bigLogo} alt="Logo des initiales de Carole Gérard" />
 

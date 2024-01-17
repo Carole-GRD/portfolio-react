@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Competences from "./components/Competences/Competences";
+import Projets from "./components/Projets/Projets";
 
 import "./App.css";
 
@@ -26,46 +27,9 @@ function App() {
 
         <Competences />
         
-        
+        <Projets />
 
 
-        {/* <section id="projects">
-            <div class="box-projects">
-                <h2>projets</h2>
-                
-                <div class="inner-projects">
-
-                    <article>
-                        <h3>Fruit concept</h3>
-                        <a href="fruitConcept.html" target="_blank">
-                        <img src="logo.png" alt="Logo 'Fruit Concept' du site réalisé lors de la formation 'Découverte des métiers de l'informtique' d'Interface 3 Namur." id="imageProject01"/></a>
-                        <p>Projet collaboratif</p>
-                        <p>-</p>
-                        <p>Site réalisé lors du projet de fin de formation "Découverte des métiers de l'informatique" de chez IF3N.</p>
-                    </article>
-
-                    <article>
-                        <h3>Quiz</h3>
-                        <a href="quizVolley.html" target="_blank">
-                        <img src="quizVolley.jpg" alt="Photo d'un ballon de volley dans un filet" id="imageProject02"/></a>
-                        <p>Projet personnel</p>
-                        <p>-</p>
-                        <p>Quiz réalisé lors de la formation "Développeuse.eur Javascript Full Stack" de chez IF3N.</p>
-                    </article>
-
-                    <article>
-                        <h3>Todo App</h3>
-                        <a href="https://react-intro-lvedfqpcv-caroles-projects.vercel.app/" target="_blank">
-                            <img src="a-faire.png" alt="Image de l'application" id="imageProject02"/>
-                        </a>
-                        <p>Projet personnel</p>
-                        <p>-</p>
-                        <p>Todo App réalisé pendant ma formation en tant que Développeuse web Frontend chez BeCode, mettant en pratique mes compétences nouvellement acquises en React.</p>
-                    </article>
-
-                </div>
-            </div>       
-        </section> */}
 
 
         {/* <section id="contact">

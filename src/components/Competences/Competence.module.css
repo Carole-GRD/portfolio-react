@@ -2,7 +2,7 @@
 /* -----------  COMPETENCES ------------ */
 /* ------------------------------------- */
 
-#competence {
+.competence {
     position: relative;
     height: auto;
     padding: 10vh 0;
@@ -29,8 +29,8 @@
     justify-content: center;
     align-items: center;
     /* border: 3px solid var(--colorLightPink); */
-    border-radius: 10px;
-    padding: 2vh 0;
+    /* border-radius: 10px; */
+    /* padding: 2vh 0; */
 }
 
 
