@@ -1,0 +1,79 @@
+/* ------------------------------------- */
+/* --------------  CARD ---------------- */
+/* ------------------------------------- */
+
+.cardContainer {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    perspective: 1000px;
+    margin: 30px;
+    /* margin: clamp(15px, 2vw, 20px); */
+    /* margin: 20px; */
+}
+
+
+
+/* Centrage dans les cartes */
+.cardContent {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+
+/* titres des cartes */
+h4 {
+    font-size: 20px;
+}
+
+/* icones sur les cartes */
+.cardContent img {
+    padding-top: 25px;
+    width: 70px;
+    filter: brightness(0) invert(1);
+}
+
+
+/* Effet de retournement des cartes */
+.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--colorLightBlack);
+    font-size: 1.5rem;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    background-color: var(--colorLightPink);
+    color: var(--colorBlack);
+    font-weight: 600;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.cardContainer:hover .cardContent {
+    transform: rotateY(180deg); 
+}
+

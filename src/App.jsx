@@ -1,10 +1,11 @@
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Competences from "./components/Competences/Competences";
 
 import "./App.css";
 
-import parallax from "./assets/images/mainClavier.webp";
+import parallax from "./assets/images/about/mainClavier.webp";
 
 function App() {
 
@@ -23,107 +24,9 @@ function App() {
 
         <About />
 
-
+        <Competences />
         
-        {/* <section id="competence">
-            <div class="box-competence">
-                <h2>Compétences</h2>
-                <div class="container-competence">
-
-                    <div class="card-computer">
-
-                        <div class="webDesign">
-                            <div class="centerTextCard">
-                                <div class="front">
-                                    <h4>Langages</h4>
-                                    <img src="iconWebDesign.png" alt="Icone de web design du graphiste ibrandify"/>
-                                </div>
-                                <div class="back">
-                                    <p>HTML5</p>
-                                    <p>CSS3</p>
-                                    <p>Javascript</p>
-                                    <p>TypeScript</p>
-                                    <p>Python</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="frontEnd">
-                            <div class="centerTextCard">
-                                <div class="front">
-                                    <h4>Frameworks et</h4>
-                                    <h4>Bibliothèques</h4>
-                                    <img src="iconFrontEnd.png" alt="Icone d'android du graphiste Swifticons"/>
-                                </div>
-                                <div class="back">
-                                    <p>React</p>        
-                                    <p>Angular</p>
-                                    <p>Tailwindcss</p>
-                                    <p>Bootstrap</p>
-                                    <p>GreenSock (GSAP)</p>
-                                    <p>OpenLayers - Leaflet</p>
-                                    <p>Chart.js</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="BackEnd">
-                            <div class="centerTextCard">
-                                <div class="front">
-                                    <h4>Back-end</h4>
-                                    <img src="iconAndroid.png" alt="Icone d'android du graphiste Swifticons"/>
-                                </div>
-                                <div class="back">
-                                    <p>Node.js</p>
-                                    <p>Express.js</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="dataBase">
-                            <div class="centerTextCard">
-                                <div class="front">
-                                    <h4>Database</h4>
-                                    <img src="iconDatabase.png" alt="Icone de database du graphiste Smashicons"/>
-                                </div>
-                                <div class="back">
-                                    <p>SQL - MySQL</p>
-                                    <p>NoSQL - MongoDB</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="collaborative">
-                            <div class="centerTextCard">
-                                <div class="front">
-                                    <h4>Collaboratif</h4>
-                                    <img src="iconCollaborate.png" alt="Icone de collaboration du graphiste ultimatearm"/>
-                                </div>
-                                <div class="back">
-                                    <p>GitHub</p>
-                                    <p>Trello</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="infrastructure">
-                            <div class="centerTextCard">
-                                <div class="front">
-                                    <h4>Infrastructure</h4>
-                                    <img src="iconInfrastructure.png" alt="Icone d'infrastructure du graphiste Eucalyp"/>
-                                </div>
-                                <div class="back">
-                                    <p>Réseaux</p>
-                                    <p>Système</p>
-                                    <p>Linux</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section> */}
+        
 
 
         {/* <section id="projects">

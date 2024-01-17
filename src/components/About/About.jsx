@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./About.module.css";
 
-import photo from "../../assets/images/photoCarole.png";
+import photo from "../../assets/images/about/photoCarole.png";
 import cv from "../../assets/cv_carole_gerard.pdf";
 
 export default function About() {

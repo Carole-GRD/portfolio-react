@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 
-import bigLogo from "../../assets/images/grandLogoCG.png"
+import bigLogo from "../../assets/images/logo/grandLogoCG.png"
 
 
 export default function Home() {

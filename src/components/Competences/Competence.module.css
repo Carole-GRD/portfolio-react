@@ -1,0 +1,54 @@
+/* ------------------------------------- */
+/* -----------  COMPETENCES ------------ */
+/* ------------------------------------- */
+
+#competence {
+    position: relative;
+    height: auto;
+    padding: 10vh 0;
+    color: var(--colorLightPink);
+    background-color: var(--colorBlack);
+}
+
+.competenceContainer {
+    position: relative;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.competenceContainer h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    /* margin-bottom: 30px; */
+    margin-bottom: 15px;
+}
+
+.competenceContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid var(--colorLightPink); */
+    border-radius: 10px;
+    padding: 2vh 0;
+}
+
+
+.cardDisplay {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    /* width: 55vw; */
+}
+
+
+/* ------------------------------------- */
+/* ----------  MEDIA QUERIES   ----------- */
+/* ------------------------------------- */
+
+/* @media only screen and (min-width: 1200px) {
+    .competenceContent  {
+        border: 3px solid var(--colorLightPink);
+    }
+} */
