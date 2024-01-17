@@ -1,5 +1,5 @@
 
-import styles from "./Projets.module.css";
+import styles from "./Projects.module.css";
 
 import Article from "./Article";
 
@@ -13,7 +13,7 @@ import rain from "../../assets/images/projects/rain.jpg";
 
 
 
-export default function Projets() {
+export default function Projects() {
 
     const dataArticle = [
         {

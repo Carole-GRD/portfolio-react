@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Competences from "./components/Competences/Competences";
-import Projets from "./components/Projets/Projets";
+import Projects from "./components/Projects/Projects";
 
 import "./App.css";
 
@@ -27,7 +27,7 @@ function App() {
 
         <Competences />
         
-        <Projets />
+        <Projects />
 
 
 
