@@ -20,7 +20,7 @@ export default function Home() {
 
             <div className={styles.homeFooter}>
                 <p><strong>Carole Gérard</strong></p>
-                <p><strong>Développeuse Web</strong> &copy;2024</p>
+                <p><strong>Développeuse Web Frontend</strong> &copy;2024</p>
             </div>
             
         </section>

@@ -4,8 +4,8 @@
 
 .about {
     position: relative;
-    /* top: 100vh; */
     height: auto;
+    min-height: 100vh;
     width: 100vw;
     padding: 10vh 0;
     background-color: #f2e9eb98;
@@ -69,7 +69,7 @@
 
 
 /* lien vers mon CV */
-#myCV {
+.myCV {
     position: relative;
     font-weight: 600;
     font-size: clamp(0.9rem, 2.3vw, 1.2rem);
@@ -84,7 +84,7 @@
     cursor: pointer;
 }
 
-#myCV:hover {
+.myCV:hover {
     background-color: var(--colorLightBlack);
     color: var(--colorLightPink);  
 } 
