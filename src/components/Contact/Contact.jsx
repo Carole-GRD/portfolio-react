@@ -1,7 +1,7 @@
 
 import styles from "./Contact.module.css";
 
-
+import Footer from "../Footer/Footer";
 
 export default function Contact() {
     return (
@@ -57,11 +57,8 @@ export default function Contact() {
             </div>
 
 
-
-            <div className={styles.contactFooter}>
-                <p><strong>Carole Gérard</strong></p>
-                <p><strong>Développeuse Web Frontend</strong> &copy;2024</p>
-            </div>
+            <Footer style={'contactFooter'} />
+            
         </section>
     );
 };

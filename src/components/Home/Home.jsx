@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 
 import bigLogo from "../../assets/images/logo/grandLogoCG.png"
 
+import Footer from "../Footer/Footer";
 
 export default function Home() {
 
@@ -13,15 +14,15 @@ export default function Home() {
 
             <div className={styles.textHomeContainer}>
                 <div id="animatedText" className={styles.textHomeContent}>
-                    <h1>Carole Gérard</h1>
-                    <p>Fais de ta vie un rêve et d'un rêve une réalité <span> - Antoine de Saint-Exupéry</span></p>
+                    {/* <h1>Carole Gérard</h1> */}
+                    {/* <p>Fais de ta vie un rêve et d'un rêve une réalité <span> - Antoine de Saint-Exupéry</span></p> */}
+                    <p>Fais de ta vie un rêve et d'un rêve une réalité</p>
+                    <p><span> - Antoine de Saint-Exupéry</span></p>
                 </div>
             </div>
 
-            <div className={styles.homeFooter}>
-                <p><strong>Carole Gérard</strong></p>
-                <p><strong>Développeuse Web Frontend</strong> &copy;2024</p>
-            </div>
+
+            <Footer style={'homeFooter'} />
             
         </section>
 

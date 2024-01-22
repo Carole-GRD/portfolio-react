@@ -25,12 +25,12 @@
 }
 
 
-/* Animation au chargement du site */
+/* Animation du texte au chargement du site */
 .textHomeContent {
     padding: 0 15vw;
     animation: 1.7s ease-in-out forwards textHomeAnimation;
 }
-/* Animation lors du scroll smooth jusqu'à la section "Home" */
+/* Animation du texte lors du scroll smooth jusqu'à la section "Home" */
 .textHomeContent2 {
     padding: 0 15vw;
     animation: 1.9s ease-in-out forwards textHomeAnimation;
@@ -45,27 +45,30 @@
     }
 }
 
-.textHomeContent h1 {
+.textHomeContent h1,
+.textHomeContent2 h1 {
     font-weight: 400;
-    font-size: clamp(1.3rem, 1.5vw, 2rem);
+    font-size: clamp(1.3rem, 1.8vw, 2.5rem);
 }
 
-.textHomeContent p {
-    font-weight: 700;
-    font-size: clamp(1.8rem, 2vw, 2.4rem);
+.textHomeContent p,
+.textHomeContent2 p {
+    font-weight: 500;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+
+}
+.textHomeContent span,
+.textHomeContent2 span {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
-.textHomeContent span {
-    font-size: clamp(1rem, 1vw, 1.5rem);
-}
 
 
+/* IMAGE (GRAND LOGO) */
 
-/* Image (Logo) */
-
-/* Animation au chargement du site */
+/* Animation du grand logo au chargement du site */
 .logoHome {
-    width: clamp(350px, 30vw, 500px);
+    width: clamp(350px, 45vw, 550px);
     z-index: 0;
     position: absolute;
     top: 50%;
@@ -73,9 +76,9 @@
     transform: translate(-50%,-50%);
     animation: 2.5s ease-in-out forwards imgBigLogoCG;
 }
-/* Animation lors du scroll smooth jusqu'à la section "Home" */
+/* Animation du grand logo lors du scroll smooth jusqu'à la section "Home" */
 .logoHome2 {
-    width: clamp(350px, 30vw, 500px);
+    width: clamp(350px, 45vw, 550px);
     z-index: 0;
     position: absolute;
     top: 50%;
@@ -91,21 +94,4 @@
     100%{
         opacity: 1;
     }
-}
-
-
-
-/* Footer de la section "Home" */
-
-.homeFooter{
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 60px;
-    background-color: var(--colorLightPink);
-    color: #31383fb0;
 }

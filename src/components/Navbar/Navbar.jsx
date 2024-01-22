@@ -6,7 +6,7 @@ import smallLogo from "../../assets/images/logo/petitLogoCG.png";
 import BurgerMenu from "./BurgerMenu";
 
 import scrollSmooth from "../../features/scrollSmooth";
-
+import scrollSpy from "../../features/scollSpy";
 
 
 export default function Navbar() {
@@ -23,6 +23,7 @@ export default function Navbar() {
         // setMenuOpen(!isMenuOpen);
         setMenuOpen(false);
         scrollSmooth(e);
+        scrollSpy(e);
     };
     
     return (
@@ -35,7 +36,7 @@ export default function Navbar() {
                     </a>
                 </li>
                 <li className={styles.navigationItem}>
-                    <a onClick={(e) => handleMenuItemClick(e)}>
+                    <a onClick={(e) => handleMenuItemClick(e)} className={styles.scrollSpy}>
                         Dev Web
                     </a>
                 </li>

@@ -35,8 +35,8 @@ body::-webkit-scrollbar{
   background-color: var(--colorBlack);
 }
 
-/* scrollspy en javascript */
-/* si (scrollspy) ancre en CSS => rajouter les href="#home"... dans le HTML !! */
+/* scrollsmooth en javascript */
+/* si (scrollsmooth) ancre en CSS => rajouter les href="#home"... dans le HTML !! */
 /* html{
   scroll-behavior: smooth;
 } */

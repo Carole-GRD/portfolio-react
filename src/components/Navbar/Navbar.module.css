@@ -26,6 +26,7 @@ nav ul {
 nav ul li {
     list-style: none;
     padding: 12px 16px;
+    /* height: 100%; */
 }
 
 nav ul li:not(.logo):hover {
@@ -50,18 +51,65 @@ nav ul li a {
 
 
 /* ------------------------------------- */
-/* ----------  MEDIA QUERIES   ----------- */
+/* ----------  MEDIA QUERIES ----------- */
 /* ------------------------------------- */
 
 @media only screen and (min-width: 800px) {
-    nav img {
+    /* nav img {
         visibility: visible;
-    }
+    } */
     nav ul li a {
         font-size: 1.2rem;
+        position: relative;
+    }
+
+    /* 
+        Ajout de la transition sur les lignes au-dessus et en-dessous du lien 
+        lorsqu'on le survole. 
+    */
+    nav ul li:not(.logo) a::before {
+        transition: 300ms;
+        height: 2px;
+        content: "";
+        position: absolute;
+        top: -2px;
+        background-color: var(--colorLightBlack);
+        width: 0%;
+        bottom: 10px;
+    }
+    nav ul li:not(.logo) a::after {
+        transition: 300ms;
+        height: 2px;
+        content: "";
+        position: absolute;
+        top: 27px;
+        left: 0;
+        background-color: var(--colorLightBlack);
+        width: 0%;
+        bottom: 10px;
+    }
+
+    nav ul li:not(.logo) a:hover::before {
+        width: 100%;
+    }
+    nav ul li:not(.logo) a:hover::after {
+        width: 100%;
+    }
+
+    /* 
+        Maintenir les couleurs car elles sont changées en mode mobile (< 800px)
+    */
+    nav ul li:not(.logo):hover {
+        background-color: var(--colorLightPink);
+    }
+    
+    nav ul li:not(.logo):hover a {
+        color: var(--colorLightBlack);
     }
 
 }
+
+
 
 @media only screen and (min-width: 1000px) {
     nav img {
@@ -70,5 +118,22 @@ nav ul li a {
     nav ul li a {
         font-size: 1.4rem;
     }
+
+    nav ul li:not(.logo) a::after {
+        top: 32px;
+    }
 }
 
+
+
+/* ------------------------------------- */
+/* -----------  SCROLL SPY  ------------ */
+/* ------------------------------------- */
+/* 
+    Ajout des lignes au-dessus et en-dessous du lien 
+    lorsqu'on est sur la section correspondante. 
+*/
+.scrollSpy{
+    border-bottom: 2px solid var(--colorLightBlack);
+    border-top: 2px solid var(--colorLightBlack);
+  }

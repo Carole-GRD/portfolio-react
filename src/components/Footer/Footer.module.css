@@ -1,0 +1,22 @@
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    font-size: 1.1rem;
+}
+
+.homeFooter{
+    background-color: var(--colorLightPink);
+    color: #31383fb0;
+}
+
+.contactFooter {
+    color: #f2e9ebbe;
+    background-color: var(--colorBlack);
+}
