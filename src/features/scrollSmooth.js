@@ -18,7 +18,7 @@ export default function scrollSmooth(event) {
             top: sectionsPosition[0],
             behavior: "smooth",
         })
-        // resetAnimation();
+        resetAnimation();
     }
     else {
         // disableScroll(); // Désactive le scroll temporairement

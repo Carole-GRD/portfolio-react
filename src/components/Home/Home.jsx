@@ -9,7 +9,7 @@ export default function Home() {
 
         <section id="home" className={styles.home}>
 
-            <img src={bigLogo} alt="Logo des initiales de Carole Gérard" />
+            <img id="animatedLogo" className={styles.logoHome} src={bigLogo} alt="Logo des initiales de Carole Gérard" />
 
             <div className={styles.textHomeContainer}>
                 <div id="animatedText" className={styles.textHomeContent}>

@@ -24,10 +24,16 @@
     align-items: center;
 }
 
+
+/* Animation au chargement du site */
 .textHomeContent {
     padding: 0 15vw;
-    animation: 1.2s ease-in-out forwards textHomeAnimation;
-
+    animation: 1.7s ease-in-out forwards textHomeAnimation;
+}
+/* Animation lors du scroll smooth jusqu'à la section "Home" */
+.textHomeContent2 {
+    padding: 0 15vw;
+    animation: 1.9s ease-in-out forwards textHomeAnimation;
 }
 
 @keyframes textHomeAnimation {
@@ -54,19 +60,31 @@
 }
 
 
+
 /* Image (Logo) */
 
-.home img {
+/* Animation au chargement du site */
+.logoHome {
     width: clamp(350px, 30vw, 500px);
     z-index: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    animation: 2s ease-in-out forwards imgBigLogoCG;
+    animation: 2.5s ease-in-out forwards imgBigLogoCG;
+}
+/* Animation lors du scroll smooth jusqu'à la section "Home" */
+.logoHome2 {
+    width: clamp(350px, 30vw, 500px);
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: 2.8s ease-in-out forwards imgBigLogoCG;
 }
 
-@keyframes imgBigLogoCG{
+@keyframes imgBigLogoCG {
     0%{
         opacity: 0;
     }
@@ -74,6 +92,7 @@
         opacity: 1;
     }
 }
+
 
 
 /* Footer de la section "Home" */

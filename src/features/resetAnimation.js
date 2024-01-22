@@ -1,16 +1,30 @@
 
+import styles from "../components/Home/Home.module.css";
 
 export default function resetAnimation() {
 
-    const element = document.querySelector('#animatedText');
-    console.log(element);
+    const animatedText = document.querySelector('#animatedText');
+    const animatedLogo = document.querySelector('#animatedLogo');
     
     // Supprimez l'animation actuelle
-    element.style.animation = 'none';
+    // animatedText.classList.remove(styles.textHomeContent);
+    if (animatedText.classList.contains(styles.textHomeContent2)) {
+        animatedText.classList.remove(styles.textHomeContent2);
+    }
+    else {
+        animatedText.classList.remove(styles.textHomeContent);
+    }
+    if (animatedLogo.classList.contains(styles.logoHome2)) {
+        animatedLogo.classList.remove(styles.logoHome2);
+    }
+    else {
+        animatedLogo.classList.remove(styles.logoHome);
+    }
     
     // Forcez un recalcul du style pour déclencher une réinitialisation
-    void element.offsetWidth;
+    void animatedText.offsetWidth;
     
     // Réappliquez la classe d'animation
-    element.style.animation = '1.2s ease-in-out forwards textHomeContent';
+    animatedText.classList.add(styles.textHomeContent2);
+    animatedLogo.classList.add(styles.logoHome2);
 }

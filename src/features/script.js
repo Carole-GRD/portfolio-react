@@ -93,24 +93,35 @@ car on demande d'effectuer une fonction (qu'on appelle addScollSmooth) à chaque
 //     element.style.animation = '1.2s ease-in-out forwards text-home';
 // }
 // -------------------------------------------------------------------
-// -------------------------------------------------------------------
+
+
+
 
 // Ajoutez un gestionnaire d'événements pour l'événement scroll
+// -------------------------------------------------------------------
 window.addEventListener('scroll', handleScroll);
+// -------------------------------------------------------------------
 
+
+
+
+// -------------------------------------------------------------------
 function handleScroll() {
     if (!scrollEnabled) {
         return; // Ne fait rien si le scroll est désactivé temporairement
     }
-
+    
     // Obtenez la position actuelle de défilement
     const scrollPosition = window.scrollY;
-
+    
     // Si la position de défilement est en haut de la page, réinitialisez l'animation
     if (scrollPosition === 0) {
         resetAnimation('.text-home');
     }
 }
+// -------------------------------------------------------------------
+
+
 
 // refaire les calculs de position si l'on modifie la taille de l'écran
 // -------------------------------------------------------------------
