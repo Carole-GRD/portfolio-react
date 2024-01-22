@@ -1,10 +1,14 @@
 
 import styles from "./BurgerMenu.module.css";
 
-export default function BurgerMenu() {
+
+
+export default function BurgerMenu({ isMenuOpen, onMenuClick, onItemClick }) {
+
+
     return (
         <>
-            <input type="checkbox" className={styles.navigationCheckbox} id="navi" />
+            <input type="checkbox" className={styles.navigationCheckbox} id="navi" onClick={onMenuClick} checked={isMenuOpen} readOnly />
 
             <label htmlFor="navi" className={styles.navigationBtn}>
                 <span className={styles.navigationIcon}>&nbsp;</span>
@@ -14,10 +18,26 @@ export default function BurgerMenu() {
 
 
             <ul className={styles.navigationList}>
-                <li><a className={styles.navigationItem}>à propos</a></li>
-                <li><a className={styles.navigationItem}>Compétences</a></li>
-                <li><a className={styles.navigationItem}>Projets</a></li>
-                <li><a className={styles.navigationItem}>Contact</a></li>
+                <li>
+                    <a className={styles.navigationItem} onClick={(e) => onItemClick(e)}>
+                        à propos
+                    </a>
+                </li>
+                <li>
+                    <a className={styles.navigationItem} onClick={(e) => onItemClick(e)}>
+                        Compétences
+                    </a>
+                </li>
+                <li>
+                    <a className={styles.navigationItem} onClick={(e) => onItemClick(e)}>
+                        Projets
+                    </a>
+                </li>
+                <li>
+                    <a className={styles.navigationItem} onClick={(e) => onItemClick(e)}>
+                        Contact
+                    </a>
+                </li>
             </ul>
         </>
     );

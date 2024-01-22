@@ -12,7 +12,7 @@ export default function Home() {
             <img src={bigLogo} alt="Logo des initiales de Carole Gérard" />
 
             <div className={styles.textHomeContainer}>
-                <div className={styles.textHomeContent}>
+                <div id="animatedText" className={styles.textHomeContent}>
                     <h1>Carole Gérard</h1>
                     <p>Fais de ta vie un rêve et d'un rêve une réalité <span> - Antoine de Saint-Exupéry</span></p>
                 </div>

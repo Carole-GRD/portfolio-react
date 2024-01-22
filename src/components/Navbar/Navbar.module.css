@@ -9,7 +9,7 @@ nav {
 }
 
 nav img {
-    visibility: hidden;
+    /* visibility: hidden; */
     height: 36px;
     margin-top: 10px;
     padding-left: 10px;

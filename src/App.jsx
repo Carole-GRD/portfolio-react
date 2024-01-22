@@ -5,38 +5,46 @@ import Competences from "./components/Competences/Competences";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 
+import parallax from "./assets/images/about/mainClavier.webp";
+
 import "./App.css";
 
-import parallax from "./assets/images/about/mainClavier.webp";
+// import { useEffect } from "react";
+
+// import scrollSmooth from "./features/scrollSmooth";
 
 function App() {
 
+  // useEffect(() => {
+  //   const positions = scrollSmooth();
+  //   console.log("positions : ", positions);
+  // }, [])
 
   return (
     <>
-        <header>
-            <Navbar />
-        </header>
+      <header>
+        <Navbar />
+      </header>
 
 
-        <main>
-            
-            <img id="aboutBackgroundImage" src={parallax} alt="Photos de mains sur un clavier d'ordinateur"/>
+      <main>
 
-            <Home />
+        <img id="aboutBackgroundImage" src={parallax} alt="Photos de mains sur un clavier d'ordinateur" />
 
-            <About />
+        <Home />
 
-            <Competences />
-            
-            <Projects />
+        <About />
 
-            <Contact />  
-            
-        </main>
+        <Competences />
+
+        <Projects />
+
+        <Contact />
+
+      </main>
 
 
-        <script src="script.js"></script>
+      <script src="script.js"></script>
     </>
   )
 }
