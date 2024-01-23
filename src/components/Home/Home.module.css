@@ -55,7 +55,7 @@
 .textHomeContent2 p {
     font-weight: 500;
     font-size: clamp(1.8rem, 2.5vw, 2.8rem);
-
+    font-family: var(--fontQuicksand);
 }
 .textHomeContent span,
 .textHomeContent2 span {

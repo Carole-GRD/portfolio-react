@@ -23,8 +23,11 @@ a {
 .articleContent h3 {
     color: var(--colorBlack);
     text-align: center;
-    font-weight: 600;
-    font-size: 1.8rem;
+    /* font-weight: 600; */
+    font-weight: 700;
+    /* font-size: 1.8rem; */
+    font-size: 2rem;
+    font-family: var(--fontQuicksand);
     margin: 40px 0 20px;
 }
 

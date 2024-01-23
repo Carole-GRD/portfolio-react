@@ -1,0 +1,127 @@
+/* ------------------------------------- */
+/* -----------  FORMULAIRE  ------------ */
+/* ------------------------------------- */
+
+
+form {
+    padding: 40px 0px;
+    background-color: var(--colorLightBlack);
+    color: var(--colorLightPink);
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.sections {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    padding: 15px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: var(----fontPoppins);
+    /* font-family: var(--fontQuicksand); */
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--colorLightPink);
+    color: var(--colorBlack);
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: var(--fontQuicksand);
+    padding:  10px;
+    border-radius: 5px;
+}
+
+select {
+    font-family: 'Poppins', sans-serif;
+    padding: 7px;
+}
+
+.sendMessage {
+    display: block;
+    width: 200px; 
+    margin: 15px auto 0;
+    padding: 15px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sendMessage:hover {
+    background-color: var(--colorBlack);
+    color: var(--colorLightPink);   
+} 
+
+
+
+/* ------------------------------------- */
+/* ---------  MEDIA QUERIES  ----------- */
+/* ------------------------------------- */
+
+@media only screen and (min-width: 800px) {
+    .contactContainer {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contactContainer {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contactContainer {
+        max-width: 50%;
+    }
+}
+
+/* Disposition du formulaire en deux colonnes */
+@media only screen and (min-width: 1400px) {
+    .contactContainer {
+        max-width: 80%;
+    }
+    .sections {
+        flex-direction: row;
+        width: 80%;
+        width: 100%;
+        justify-content: center;
+        gap: 6%;
+    }
+    .left, .right {
+        width: 40%;
+    }
+    textarea {
+        height: 255px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .contactContainer {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .contactContainer {
+        max-width: 60%;
+    }
+}
