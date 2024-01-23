@@ -9,16 +9,8 @@ import parallax from "./assets/images/about/mainClavier.webp";
 
 import "./App.css";
 
-// import { useEffect } from "react";
-
-// import scrollSmooth from "./features/scrollSmooth";
 
 function App() {
-
-  // useEffect(() => {
-  //   const positions = scrollSmooth();
-  //   console.log("positions : ", positions);
-  // }, [])
 
   return (
     <>

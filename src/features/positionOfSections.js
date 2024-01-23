@@ -1,8 +1,8 @@
 
 
-export default function positionOfSections() {
+// export default function positionOfSections() {
     
-    const sections = [...document.querySelectorAll('section')];
+//     const sections = [...document.querySelectorAll('section')];
 
-    return sections.map(section => section.offsetTop);
-}
+//     return sections.map(section => section.offsetTop);
+// }
