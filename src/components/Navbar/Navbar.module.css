@@ -34,7 +34,9 @@ nav ul li a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.4rem;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: 500;
+    font-family: var(--fontQuicksand);
     cursor: pointer;
 }
 
@@ -52,22 +54,30 @@ nav ul:last-of-type li:hover a {
 /* ------------------------------------- */
 nav ul li:not(.logo) a.scrollSpy::before {
     content: "";
-    height: 2px;
+    height: 1px;
     position: absolute;
     top: -3px;
     left: 0;
     background-color: var(--colorBlack);
     width: 100%;
 }
+nav ul:last-of-type li a.scrollSpy::before {
+    background-color: #fff;
+    background-color: var(--colorLightPink);
+}
 
 nav ul li:not(.logo) a.scrollSpy::after {
     content: "";
-    height: 2px;
+    height: 1px;
     position: absolute;
     left: 0;
     background-color: var(--colorBlack);
     width: 100%;
-    bottom: 0px;
+    bottom: -3px;
+}
+nav ul:last-of-type li a.scrollSpy::after {
+    background-color: #fff;
+    background-color: var(--colorLightPink);
 }
 
 

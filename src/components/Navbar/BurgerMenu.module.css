@@ -61,6 +61,7 @@
         font-size: 2rem;
         font-weight: 400;
         color: #fff;
+        color: var(--colorLightPink);
     }
 
     /* Background */
@@ -84,7 +85,8 @@
 
     /* Button */
     .navigationBtn {
-        background-color: #fff;
+        /* background-color: #fff; */
+        background-color: var(--colorLightBlack);
         height: 40px;
         width: 40px;
         position: fixed;
@@ -103,7 +105,8 @@
         margin-top: 20px;
         width: 20px;
         height: 2px;
-        background-color: #333;
+        /* background-color: #333; */
+        background-color: var(--colorLightPink);
         display: inline-block;
     }
 
@@ -111,7 +114,8 @@
     .navigationIcon::after {
         width: 20px;
         height: 2px;
-        background-color: #333;
+        /* background-color: #333; */
+        background-color: var(--colorLightPink);
         display: inline-block;
         content: "";
         position: absolute;
@@ -120,11 +124,15 @@
     }
 
     .navigationIcon::before {
-        top: -8px;
+        top: -6px;
     }
 
     .navigationIcon::after {
-        top: 8px;
+        top: 6px;
+    }
+
+    .navigationCheckbox:checked+ .navigationBtn {
+        background-color: var(--colorLightPink);
     }
 
     .navigationCheckbox:checked+ .navigationBtn .navigationIcon {
@@ -134,9 +142,11 @@
     .navigationCheckbox:checked+ .navigationBtn .navigationIcon::before {
         top: 0;
         transform: rotate(135deg);
+        background-color: var(--colorLightBlack);
     }
     .navigationCheckbox:checked+ .navigationBtn .navigationIcon::after {
         top: 0;
         transform: rotate(-135deg);
+        background-color: var(--colorLightBlack);
     }
 }
