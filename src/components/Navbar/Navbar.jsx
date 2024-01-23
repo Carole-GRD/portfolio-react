@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import styles from "./Navbar.module.css";
+// import navigationStyles from "./BurgerMenu.module.css";
+
 import smallLogo from "../../assets/images/logo/petitLogoCG.png";
 
 import BurgerMenu from "./BurgerMenu";
@@ -35,7 +37,8 @@ export default function Navbar() {
                         <img src={smallLogo} alt="Logo Carole Gérard avec un lien qui ramène à la page accueil" />
                     </a>
                 </li>
-                <li className={styles.navigationItem}>
+                {/* <li className={navigationStyles.navigationItem}> */}
+                <li>
                     <a onClick={(e) => handleMenuItemClick(e)} className={styles.scrollSpy}>
                         Dev Web
                     </a>

@@ -71,7 +71,9 @@
         position: fixed;
         top: 11px;
         right: 71px;
-        background-image: radial-gradient(#c3073f, #950740);
+        /* background-image: radial-gradient(#c3073f, #950740); */
+        background-color: var(--colorLightBlack);
+        color: var(--colorBlack);
         z-index: 1000;
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }

@@ -3,6 +3,7 @@ import styles from "../components/Navbar/Navbar.module.css";
 
 export default function scrollSpy(event) {
     const navLinks = [...document.querySelectorAll('nav a')];
+    console.log("navLinks : ", navLinks);
 
     // retirer le style du lien cliqué précédemment
     for (let i = 0; i < navLinks.length; i++) {
