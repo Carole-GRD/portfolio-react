@@ -1,3 +1,6 @@
+/* ------------------------------------- */
+/* -------------  ARTICLE  ------------- */
+/* ------------------------------------- */
 
 a {
     text-decoration: none;
@@ -17,15 +20,13 @@ a {
 }
 .articleContent:hover {
     border: none;
-    box-shadow: 5px 5px 20px 0px var(--colorLightBlack);
+    box-shadow: 5px 5px 15px -5px var(--colorLightBlack);
 }
 
 .articleContent h3 {
     color: var(--colorBlack);
     text-align: center;
-    /* font-weight: 600; */
     font-weight: 700;
-    /* font-size: 1.8rem; */
     font-size: 2rem;
     font-family: var(--fontQuicksand);
     margin: 40px 0 20px;
@@ -38,7 +39,7 @@ a {
     background-color: white;
     margin-bottom: 40px;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px -1px var(--colorLightBlack);
+    box-shadow: 3px 3px 10px -3px var(--colorLightBlack);
     transition: box-shadow .3s;
 }
 .articleContent:hover img {

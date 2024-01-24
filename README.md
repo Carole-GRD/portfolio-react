@@ -7,5 +7,11 @@ Portfolio initialement créé avec HTML, CSS, et JavaScript en 2022, puis mis à
 - Vite.js
 - React
 
+### Librairies
+
+- react-router-dom
+- react-scroll
+- @emailjs/browser
+
 
 

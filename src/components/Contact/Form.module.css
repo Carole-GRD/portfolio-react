@@ -70,6 +70,68 @@ select {
 } 
 
 
+/* --------------  MODAL  -------------- */
+
+
+/* The Modal (background) */
+.activeModal {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.hiddenModal {
+    display: none;
+}
+
+/* Modal Content */
+.modalContent {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--colorLightPink);
+    padding: 40px 20px;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* The Close Button */
+.closeModal {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--colorLightBlack);
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    color: var(--colorPink);
+}
+
+/* Modal Text */
+.modalContent p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--colorLightBlack);
+    text-align: center;
+    font-family: var(--fontQuicksand);
+}
+
+
+
 
 /* ------------------------------------- */
 /* ---------  MEDIA QUERIES  ----------- */
@@ -90,6 +152,10 @@ select {
 @media only screen and (min-width: 1200px) {
     .contactContainer {
         max-width: 50%;
+    }
+    
+    .closeModal {
+        display: block;
     }
 }
 
