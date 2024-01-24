@@ -30,6 +30,10 @@ label {
     font-family: var(--fontPoppins);
 }
 
+.errors {
+    color: var(--colorPink);
+}
+
 select,
 input,
 textarea {
@@ -70,8 +74,16 @@ select {
 } 
 
 
+
 /* --------------  MODAL  -------------- */
 
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/* --------------  MODAL  -------------- */
 
 /* The Modal (background) */
 .activeModal {

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
 import styles from "./Form.module.css";
@@ -13,41 +14,68 @@ export default function Form() {
 
     // State to open/close the modal
     const [modal, setModal] = useState(false);
+    const [modalText, setModalText] = useState("");
 
+    // ...
     const formRef = useRef();
     const timeoutRef = useRef(null);
 
-    // Function to send an email
-    const sendEmail = (e) => {
-        e.preventDefault();
+    // ...
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
 
-        // Send email using emailjs library
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-            .then((result) => {
 
-                // If the email is sent successfully
-                if (result.status ===  200 && result.text === "OK") {
-                    // Open the modal
-                    setModal(true);
+    function onSubmit(data) {
 
-                    // Clear previous timeout (if any)
-                    if (timeoutRef.current) {
-                        clearTimeout(timeoutRef.current);
+        console.log("data : ", data);
+        console.log("data.honeypot : ", data.honeypot);
+        if (data.honeypot) {
+            // Report as bot submission for tracking
+            setModalText("Erreur de soumission du formulaire.");
+            // Open the modal
+            setModal(true);
+            // Clear previous timeout (if any)
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+            // Set a new timeout to hide the modal after 5 seconds
+            timeoutRef.current = setTimeout(() => {
+                setModal(false);
+            }, 3000);
+
+            // Early return and finish this task
+            return;
+        }
+        else {
+            // Send email using emailjs library
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+                .then((result) => {
+                    // If the email is sent successfully
+                    if (result.status === 200 && result.text === "OK") {
+                        // Reports the sending of the email
+                        setModalText("Merci pour votre message.");
+                        // Open the modal
+                        setModal(true);
+                        // Clear previous timeout (if any)
+                        if (timeoutRef.current) {
+                            clearTimeout(timeoutRef.current);
+                        }
+                        // Set a new timeout to hide the modal after 5 seconds
+                        timeoutRef.current = setTimeout(() => {
+                            setModal(false);
+                        }, 5000);
                     }
-
-                    // Set a new timeout to hide the modal after 5 seconds
-                    timeoutRef.current = setTimeout(() => {
-                        setModal(false);
-                    }, 5000);
-                }
-            }, (error) => {
-                console.log(error);
-                console.log(error.text);
-            });
-
-        // Reset the form fields
-        e.target.reset();
-    };
+                }, (error) => {
+                    console.log(error);
+                    console.log(error.text);
+                });
+            reset();
+        }
+    }
 
     // useEffect hook to clean up the timeout on component unmount
     useEffect(() => {
@@ -65,13 +93,21 @@ export default function Form() {
 
     return (
         <>
-        {/* Form section with input fields */}
-            <form ref={formRef} onSubmit={sendEmail}>
+            {/* Form section with input fields */}
+            <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
+
+                {/* This would be a bot field with type="hidden" */}
+                <input
+                    {...register('honeypot')}
+                    placeholder='do not fill this'
+                    type='checkbox'
+                    className={styles.honeypot} />
+
                 <div className={styles.sections}>
                     <section className={styles.left}>
                         <article>
                             <label htmlFor="gender">M. / Mme / Mlle :</label>
-                            <select name="gender" id="gender" defaultValue="">
+                            <select {...register('gender')} id="gender" defaultValue="">
                                 <option value="" disabled hidden></option>
                                 <option value="Mme">Madame</option>
                                 <option value="M.">Monsieur</option>
@@ -80,26 +116,55 @@ export default function Form() {
                         </article>
                         <article>
                             <label htmlFor="lastName">Nom :</label>
-                            <input type="text" name="lastName" id="lastName" placeholder="Nom" />
+                            <input
+                                type="text"
+                                {...register('lastName', { required: true, minLength: 2 })}
+                                id="lastName"
+                                placeholder="Nom" />
+                            {errors.lastName && <span className={styles.errors}>Champs obligatoire (minimum 2 caractères)</span>}
                         </article>
                         <article>
                             <label htmlFor="firstName">Prénom :</label>
-                            <input type="text" name="firstName" id="firstName" placeholder="Prénom" />
+                            <input
+                                type="text"
+                                {...register('firstName', { required: true, minLength: 2 })}
+                                id="firstName"
+                                placeholder="Prénom" />
+                            {errors.firstName && <span className={styles.errors}>Champs obligatoire (minimum 2 caractères)</span>}
                         </article>
                         <article>
                             <label htmlFor="tel">Téléphone :</label>
-                            <input type="tel" name="tel" id="tel" placeholder="Téléphone" />
+                            <input
+                                type="tel"
+                                {...register('tel')}
+                                id="tel"
+                                placeholder="Téléphone" />
                         </article>
                     </section>
 
                     <section className={styles.right}>
                         <article>
                             <label htmlFor="email">Email :</label>
-                            <input type="email" name="email" id="email" placeholder="Email" />
+                            <input
+                                type="email"
+                                {...register('email', {
+                                    required: true,
+                                    pattern: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/
+                                })}
+                                id="email"
+                                placeholder="Email" />
+                            {errors.email && errors.email.type === "required" && <span className={styles.errors}>Champ obligatoire</span>}
+                            {errors.email && errors.email.type === "pattern" && <span className={styles.errors}>Format d'email invalide</span>}
                         </article>
                         <article>
                             <label htmlFor="message">Message :</label>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            <textarea
+                                {...register('message', { required: true })}
+                                id="message"
+                                cols="30"
+                                rows="10"
+                                placeholder="Message"></textarea>
+                            {errors.message && <span className={styles.errors}>Champs obligatoire</span>}
                         </article>
                     </section>
                 </div>
@@ -110,8 +175,8 @@ export default function Form() {
             {/* Modal section */}
             <div id="myModal" onClick={handleCloseModal} className={modal ? styles.activeModal : styles.hiddenModal}>
                 <div className={styles.modalContent}>
-                    <span id="closeModalBtn" onClick={handleCloseModal} className={styles.closeModal}>&times;</span>
-                    <p>Merci pour votre message.</p>
+                    {/* <span id="closeModalBtn" onClick={handleCloseModal} className={styles.closeModal}>&times;</span> */}
+                    <p>{modalText}</p>
                 </div>
             </div>
         </>

@@ -12,6 +12,8 @@ Portfolio initialement créé avec HTML, CSS, et JavaScript en 2022, puis mis à
 - react-router-dom
 - react-scroll
 - @emailjs/browser
+- react-hook-form
+
 
 
 
