@@ -30,7 +30,7 @@ export default function Competences() {
             title: "Backend",
             logo: iconAndroid, 
             alt: "Icone d'android du graphiste Swifticons",
-            techno: ["Node.js", "Express.js"]
+            techno: ["Node.js", "Express.js", "PHP"]
         },
         {   
             title: "Database",

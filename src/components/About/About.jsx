@@ -19,8 +19,8 @@ export default function About() {
 
                         <h2>Développeuse Web Frontend</h2>
                         
-                        <p>Attirée par la compréhension des technologies de plus en plus présentes dans notre quotidien, j'ai entrepris d'explorer les métiers de l'informatique.</p>
-                        <p>Attirée par les défis et la logique, j'ai développé un intérêt marqué pour la programmation. Mon choix s'est orienté vers le développement web frontend, où je peux exploiter mes compétences pour créer des expériences utilisateur significatives.</p>
+                        <p>Animée par la volonté de comprendre les technologies omniprésentes dans notre quotidien, je me suis lancée dans l'exploration des métiers de l'informatique.</p>
+                        <p>Ainsi, séduite par les défis et la logique inhérente à la programmation, mon intérêt s'est rapidement cristallisé autour du développement web frontend. C'est dans ce domaine précis que je mets en œuvre mes compétences pour concevoir des expériences utilisateur  intuitives et engageantes.</p>
 
                         <Link to={cv} target="_blank" id="myCV" className={styles.myCV}>
                             CV format PDF
